@@ -9,8 +9,6 @@ Checkbox
 
 Connection
 
-Contact
-
 Container
 
 Dashboard
