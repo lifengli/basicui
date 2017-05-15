@@ -1,4 +1,4 @@
-#basicui 
+# basicui 
 
 Basic UI components based on NodeJS and ReactJS
 
@@ -6,8 +6,6 @@ Basic UI components based on NodeJS and ReactJS
 [![license](https://img.shields.io/npm/l/express.svg)](https://github.com/lifengli/uiserver)
 [![Maintenance](https://img.shields.io/maintenance/yes/2017.svg)](https://github.com/lifengli/uiserver)
 [![Pull](https://img.shields.io/badge/pull%20request-welcome-ff69b4.svg)](https://github.com/lifengli/uiserver)
-
-## UI Components
 
 ### Navigation
 
@@ -33,13 +31,13 @@ Basic UI components based on NodeJS and ReactJS
 
 > tab
 
-### Running
+### Run UI
 
 > npm start
 
 By default, the http server binds to localhost or 0.0.0.0 at port 8080
 
-### Testing
+### Test
 
 > npm run lint
 
