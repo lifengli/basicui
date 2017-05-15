@@ -1,62 +1,50 @@
-# basicui
+#basicui 
 Basic UI components based on NodeJS and ReactJS
 
-Alert
+[![Dependency](https://img.shields.io/david/expressjs/express.svg)](https://github.com/lifengli/uiserver)
+[![license](https://img.shields.io/npm/l/express.svg)](https://github.com/lifengli/uiserver)
+[![Maintenance](https://img.shields.io/maintenance/yes/2017.svg)](https://github.com/lifengli/uiserver)
+[![Pull](https://img.shields.io/badge/pull%20request-welcome-ff69b4.svg)](https://github.com/lifengli/uiserver)
 
-BreadCrumbs
+## UI Components
 
-Checkbox
+> Navigation
 
-Connection
+breadcrumbs
 
-Container
+tree
 
-Dashboard
+wizard
 
-Dialog
+> Layout
 
-Drawer
+card
 
-Dropdown
+sidebar
 
-Ellipsis
+topnav
 
-Gallery
+> Container
 
-Header
+grid
 
-Icons
+popover
 
-Lable Button
+tab
 
-Left Navigation Bar
+### Running
 
-Page Flipper
+> npm start
 
-Panel
+By default, the http server binds to localhost or 0.0.0.0 at port 8080
 
-Popover
+### Testing
 
-Progress Indicator
+> npm run lint
 
-Radio Button
+> npm run test
 
-Search Field
+### Build (to-do)
 
-Slider
-
-Tab
-
-Table
-
-Tile
-
-Tool Tip
-
-Top Navigation Bar
-
-Tree
-
-Wizard
-
+/public/javascrips/ holds the build files
 
