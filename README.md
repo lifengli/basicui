@@ -31,6 +31,14 @@ Basic UI components based on NodeJS and ReactJS
 
 > tab
 
+### Misc
+
+> ellipsis
+
+> flyout
+
+> loading
+
 ### Run UI
 
 > npm start
