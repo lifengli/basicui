@@ -39,7 +39,7 @@ Basic UI components based on NodeJS and ReactJS
 
 > loading
 
-### Run UI
+### To start UI in dev mode, first to start uiserver, then:
 
 > npm start
 
