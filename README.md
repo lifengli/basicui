@@ -51,6 +51,8 @@ By default, the http server binds to localhost or 0.0.0.0 at port 8080
 
 > npm run test
 
+> npm run coverage
+
 ### Build (to-do)
 
 /public/javascrips/ holds the build files
