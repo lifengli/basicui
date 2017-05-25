@@ -67,11 +67,9 @@ if (BUILD_TYPE !== 'dev') {
         unused: true,
         if_return: true,
         join_vars: true,
-        drop_console: true,
         drop_debugger: true
       },
-      comments: false,
-      minimize: true
+      comments: false
     })
   );
 }
