@@ -11,6 +11,7 @@
     "compile": "babel -d lib/ src/",
     "clean": "rm -rf lib",
     "dist": "npm run clean && npm run compile",
+    "build": "webpack",
     "lint": "eslint src test --ext .js,.jsx",
     "test": "mocha",
     "coverage": "gulp coverage -c 0 --require ignore-styles",
@@ -72,6 +73,7 @@
     "sinon": "^2.2.0",
     "sinon-chai": "^2.10.0",
     "webpack": "^2.5.1",
+    "webpack-merge": "^4.1.0",
     "webpack-dev-server": "^2.4.5",
     "yargs": "^8.0.1"
   }
