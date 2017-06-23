@@ -3,6 +3,8 @@ import _ from 'lodash';
 import ReactDOM from 'react-dom';
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
+import { createHashHistory } from 'history'
+import {Router, Route, IndexRedirect, Redirect} from 'react-router';
 
 import thunkMiddleware from 'redux-thunk';
 import {createStore, applyMiddleware} from 'redux';
@@ -22,11 +24,15 @@ const createStoreWithMiddleware = applyMiddleware(thunkMiddleware)(createStore);
 const store = createStoreWithMiddleware(reducer);
 const uiTheme = _.cloneDeep(SampleTheme);
 
+const applicationId = 'basic-ui';
+
 class Application extends PureComponent {
   getChildContext() {
     return {
+      applicationId,
       store,
-      uiTheme
+      uiTheme,
+      location: this.props.location
     };
   }
 
@@ -40,8 +46,17 @@ class Application extends PureComponent {
 }
 
 Application.childContextTypes = {
+  applicationId: PropTypes.string,
   store: PropTypes.object,
-  uiTheme: PropTypes.object
+  uiTheme: PropTypes.object,
+  location: PropTypes.object
 };
 
-ReactDOM.render(<Application />, document.getElementById('container'));
+export const router = (
+  <Router key="router" history={createHashHistory()}>
+    <Route key="root" path="/" component={Application}>
+    </Route>
+  </Router>
+);
+
+ReactDOM.render(router, document.getElementById('container'));
