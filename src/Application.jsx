@@ -3,8 +3,8 @@ import _ from 'lodash';
 import ReactDOM from 'react-dom';
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import { createHashHistory } from 'history'
-import {Router, Route, IndexRedirect, Redirect} from 'react-router';
+import { createBrowserHistory } from 'history'
+import {Router, Route, IndexRedirect, Redirect, BrowserRouter} from 'react-router';
 
 import thunkMiddleware from 'redux-thunk';
 import {createStore, applyMiddleware} from 'redux';
@@ -53,7 +53,7 @@ Application.childContextTypes = {
 };
 
 export const router = (
-  <Router key="router" history={createHashHistory()}>
+  <Router key="router" history={createBrowserHistory()}>
     <Route key="root" path="/" component={Application}>
     </Route>
   </Router>
