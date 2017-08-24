@@ -10,6 +10,12 @@ const colors = {
     top: Colors.white,
     bottom: Colors.blue.normal
   },
+  link: {
+    top: Colors.blue.lighter,
+    middle: Colors.blue.normal,
+    bottom: Colors.blue.darker,
+    disabled: Colors.grey.darker
+  },
   icon: {
     svg: Colors.blue.darker,
     secondary: Colors.grey.darker,
@@ -68,9 +74,18 @@ const category = {
   paddingTop: 10,
   paddingBottom: 10,
   paddingLeft: 24,
-  fontSize: 20,
-  color: Colors.grey.darker
+  fontSize: 20
 };
+
+const activatedLink = {
+  //cursor: 'pointer',
+  color: colors.link.bottom
+};
+
+const inactivatedLink = {
+  color: colors.link.disabled
+};
+
 
 const iconContainer = {
   marginLeft: 10,
@@ -82,5 +97,7 @@ export default {
   pageHeader,
   subHeader,
   category,
-  iconContainer
+  iconContainer,
+  activatedLink,
+  inactivatedLink
 };

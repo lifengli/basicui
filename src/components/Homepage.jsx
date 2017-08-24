@@ -27,6 +27,8 @@ export default class Homepage extends PureComponent {
     styles.subHeader = theme.subHeader;
     styles.category = theme.category;
     styles.iconContainer = theme.iconContainer;
+    styles.activatedLink = theme.activatedLink;
+    styles.inactivatedLink = theme.inactivatedLink;
 
     return styles;
   }
@@ -41,9 +43,16 @@ export default class Homepage extends PureComponent {
           <div key={content.get('id')} style={styles.section}>
             <div style={styles.subHeader}>{content.get('name')}</div>
             {(() => {
+              //temporarily activate first link
+              const active = new RegExp(/rainforest/i);
               pageitem = content.get('items').map(item => {
+                if(active.test(item)){
+                    return (
+                      <div key={item} style={_.assign(styles.activatedLink, styles.category)}>{item}</div>
+                    );
+                }
                 return (
-                  <div key={item} style={styles.category}>{item}</div>
+                  <div key={item} style={_.assign(styles.inactivatedLink, styles.category)}>{item}</div>
                 );
               });
             })()}

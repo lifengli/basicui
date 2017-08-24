@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 
-const UIPATH = process.env.UI_PATH;
+const UIPATH = process.env.UI_BASE_PATH;
 const TARGET = process.env.npm_lifecycle_event;
 const BUILD_TYPE = process.env.BUILD_TYPE || 'dev';
 
@@ -49,7 +49,14 @@ const common = {
         include: __dirname
       }
     ]
-  }
+  },
+  plugins: [
+      new webpack.DefinePlugin({
+        //set UI_BASE_PATH in your environment
+        'process.env.UI_BASE_PATH': JSON.stringify(''),
+        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+      })
+  ]
 };
 
 if (BUILD_TYPE !== 'dev') {
