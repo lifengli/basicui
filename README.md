@@ -9,15 +9,15 @@ Basic UI components based on NodeJS and ReactJS
 
 ## Dev
 
-### 1. start ui server at :3001
+### 1. start uiserver at :3001
 
 > npm start
 
-### 2. start UI in dev mode
+### 2. start basicui in dev mode
 
 > npm start
 
-*By default, the http server binds to localhost or 0.0.0.0 at port 8080
+*by default, the http server binds to localhost or 0.0.0.0 at port 8080
 
 ### 3. Test
 
