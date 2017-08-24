@@ -7,39 +7,13 @@ Basic UI components based on NodeJS and ReactJS
 [![Maintenance](https://img.shields.io/badge/maintained-yes-orange.svg)](https://github.com/lifengli/basicui)
 [![Pull](https://img.shields.io/badge/pull%20request-welcome-ff69b4.svg)](https://github.com/lifengli/basicui)
 
-### Navigation
+## Dev
 
-> breadcrumbs
+### First, start ui server at :3001
 
-> tree
+> npm start
 
-> wizard
-
-### Layout
-
-> card
-
-> sidebar
-
-> topnav
-
-### Container
-
-> grid
-
-> popover
-
-> tab
-
-### Misc
-
-> ellipsis
-
-> flyout
-
-> loading
-
-### To start UI in dev mode, first to start uiserver, then:
+### Then, start UI in dev mode
 
 > npm start
 
@@ -53,7 +27,11 @@ By default, the http server binds to localhost or 0.0.0.0 at port 8080
 
 > npm run coverage
 
-### Build (to-do)
+## Build
 
-/public/javascrips/ holds the build files
+> npm run build
+
+/public/javascrips/ on uiserver holds the build files
+
+after that you only need to run uiserver
 
