@@ -9,17 +9,17 @@ Basic UI components based on NodeJS and ReactJS
 
 ## Dev
 
-### First, start ui server at :3001
+### 1. start ui server at :3001
 
 > npm start
 
-### Then, start UI in dev mode
+### 2. start UI in dev mode
 
 > npm start
 
-By default, the http server binds to localhost or 0.0.0.0 at port 8080
+*By default, the http server binds to localhost or 0.0.0.0 at port 8080
 
-### Test
+### 3. Test
 
 > npm run lint
 
@@ -31,7 +31,5 @@ By default, the http server binds to localhost or 0.0.0.0 at port 8080
 
 > npm run build
 
-/public/javascrips/ on uiserver holds the build files
-
-after that you only need to run uiserver
+*bundle will be generated to /public/javascrips/ on uiserver
 
