@@ -9,7 +9,7 @@ Basic UI components based on NodeJS and ReactJS
 
 ## Dev
 
-### 1. start uiserver at :3001
+### 1. start uiserver at port 3000/3001
 
 > npm start
 
