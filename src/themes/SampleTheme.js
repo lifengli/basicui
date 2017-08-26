@@ -78,7 +78,7 @@ const category = {
 };
 
 const activatedLink = {
-  //cursor: 'pointer',
+  // cursor: 'pointer',
   color: colors.link.bottom
 };
 

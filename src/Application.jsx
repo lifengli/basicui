@@ -3,7 +3,7 @@ import _ from 'lodash';
 import ReactDOM from 'react-dom';
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import { createBrowserHistory } from 'history'
+import { createBrowserHistory } from 'history';
 import {Router, Route, IndexRedirect, Redirect, BrowserRouter} from 'react-router';
 
 import thunkMiddleware from 'redux-thunk';
@@ -14,6 +14,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import reducer from './reducers/root';
 import SampleTheme from './themes/SampleTheme';
 import HomePage from './containers/Homepage';
+import AmazonRainforest from './containers/navigation/Amazon_Rainforest';
 
 require('velocity-animate');
 require('velocity-animate/velocity.ui');
@@ -55,6 +56,7 @@ Application.childContextTypes = {
 export const router = (
   <Router key="router" history={createBrowserHistory()}>
     <Route key="root" path="/" component={Application}>
+      <Route key="navigation" path="navigation" component={AmazonRainforest} />
     </Route>
   </Router>
 );
