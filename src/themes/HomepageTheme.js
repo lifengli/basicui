@@ -4,6 +4,12 @@ const homepage = {
   overflow: 'hidden'
 };
 
+const homepageBg = {
+  backgroundImage: 'url("/images/galaxy.gif")',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover'
+};
+
 const header = {
   width: '100%',
   height: 100,
@@ -24,11 +30,13 @@ const section = {
   marginRight: 24,
   marginBottom: 30,
   float: 'left',
-  border: '1px solid #ddd'
+  borderRadius: 5,
+  border: '1px solid #333'
 };
 
 export default {
   homepage,
+  homepageBg,
   header,
   content,
   section

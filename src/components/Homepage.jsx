@@ -73,7 +73,7 @@ export default class Homepage extends PureComponent {
     const titleIcon = React.cloneElement(<EditorFormatColorFill />, {color: '#FF7300', width: 24, height: 24});
 
     return (
-      <div style={_.assign({}, styles.homepage, this.props.style)}>
+      <div style={_.assign({}, styles.homepage, styles.homepageBg, this.props.style)}>
         <div style={styles.header}>
           <div style={styles.pageHeader}><span style={styles.iconContainer}>{titleIcon}</span>Basic UI</div>
         </div>
