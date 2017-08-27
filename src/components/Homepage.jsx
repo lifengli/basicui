@@ -48,7 +48,15 @@ export default class Homepage extends PureComponent {
               pageitem = content.get('items').map(item => {
                 if (active.test(item)) {
                   return (
-                    <div key={item} style={_.assign(styles.activatedLink, styles.category)}>{item}</div>
+                    <div
+                      key={item}
+                      style={_.assign(styles.activatedLink, styles.category)}
+                      onClick={() => {
+                        this.context.router.history.push('/navigation');
+                      }}
+                    >
+                      {item}
+                    </div>
                   );
                 }
                 return (

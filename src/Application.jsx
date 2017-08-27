@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import { createBrowserHistory } from 'history';
-import {Router, Route, IndexRedirect, Redirect, BrowserRouter} from 'react-router';
+import {Router, Route, Switch, BrowserRouter} from 'react-router-dom';
 
 import thunkMiddleware from 'redux-thunk';
 import {createStore, applyMiddleware} from 'redux';
@@ -14,7 +14,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import reducer from './reducers/root';
 import SampleTheme from './themes/SampleTheme';
 import HomePage from './containers/Homepage';
-import AmazonRainforest from './containers/navigation/Amazon_Rainforest';
+import AmazonPage from './page/Amazon_Page';
 
 require('velocity-animate');
 require('velocity-animate/velocity.ui');
@@ -53,12 +53,19 @@ Application.childContextTypes = {
   location: PropTypes.object
 };
 
-export const router = (
-  <Router key="router" history={createBrowserHistory()}>
-    <Route key="root" path="/" component={Application}>
-      <Route key="navigation" path="navigation" component={AmazonRainforest} />
-    </Route>
-  </Router>
+Application.PropTypes = {
+  location: PropTypes.object
+};
+
+const BasicUI = () => (
+  <Switch>
+    <Route key="root" exact={true} path="/" component={Application} />
+    <Route key="navigation" path="/navigation" component={AmazonPage} />
+  </Switch>
 );
 
-ReactDOM.render(router, document.getElementById('container'));
+ReactDOM.render((
+  <BrowserRouter>
+    <BasicUI />
+  </BrowserRouter>
+), document.getElementById('container'));
