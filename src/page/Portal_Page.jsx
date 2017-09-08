@@ -5,9 +5,9 @@ import thunkMiddleware from 'redux-thunk';
 import {createStore, applyMiddleware} from 'redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-import reducer from '../reducers/navigation';
+import reducer from '../reducers/homepage';
 import SampleTheme from '../themes/SampleTheme';
-import AmazonRainforest from '../containers/navigation/Amazon_Rainforest';
+import HomePage from '../containers/Homepage';
 
 // each page handle its own reducer and store instance
 // tbd: only top level props need to be shared from common reducer
@@ -15,9 +15,12 @@ const createStoreWithMiddleware = applyMiddleware(thunkMiddleware)(createStore);
 const store = createStoreWithMiddleware(reducer);
 const uiTheme = _.cloneDeep(SampleTheme);
 
-export default class AmazonPage extends PureComponent {
+const applicationId = 'basic-ui';
+
+export default class PortalPage extends PureComponent {
   getChildContext() {
     return {
+      applicationId,
       store,
       uiTheme,
       location: this.props.location
@@ -27,18 +30,19 @@ export default class AmazonPage extends PureComponent {
   render() {
     return (
       <MuiThemeProvider>
-        <AmazonRainforest />
+        <HomePage />
       </MuiThemeProvider>
     );
   }
 }
 
-AmazonPage.childContextTypes = {
+PortalPage.childContextTypes = {
+  applicationId: PropTypes.string,
   store: PropTypes.object,
   uiTheme: PropTypes.object,
   location: PropTypes.object
 };
 
-AmazonPage.propTypes = {
+PortalPage.PropTypes = {
   location: PropTypes.object
 };

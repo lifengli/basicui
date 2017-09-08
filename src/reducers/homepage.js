@@ -1,5 +1,6 @@
 import Immutable from 'immutable';
 import { createReducer } from 'redux-act';
+import { combineReducers } from 'redux';
 
 import {
   homepageLayout,
@@ -13,7 +14,7 @@ const defaultState = Immutable.fromJS({
   pageLayout: null
 });
 
-const reducer = createReducer({
+const homepage = createReducer({
   [homepageLayout]: (state, params) => state.mergeDeep({
     creatingConnection: true,
     pageLayout: params
@@ -28,5 +29,9 @@ const reducer = createReducer({
     });
   }
 }, defaultState);
+
+const reducer = combineReducers({
+  homepage
+});
 
 export default reducer;
