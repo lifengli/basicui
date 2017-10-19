@@ -2,13 +2,12 @@ import _ from 'lodash';
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import EditorFormatColorFill from 'material-ui/svg-icons/editor/format-color-fill';
-
-import { getNavigationContent } from '../../actions/navigation';
+import { getNaturalContent } from '../../actions/natural';
 import homepageStyle from '../../themes/HomepageTheme';
 import navigationStyle from '../../themes/NavigationTheme';
+import naturalStyle from '../../themes/NaturalTheme';
 
-export default class AmazonRainforest extends PureComponent {
+export default class GrandCanyon extends PureComponent {
   constructor(props, context) {
     super(props, context);
     this.state = {
@@ -17,7 +16,7 @@ export default class AmazonRainforest extends PureComponent {
   }
 
   componentDidMount() {
-    this.context.store.dispatch(getNavigationContent());
+    this.context.store.dispatch(getNaturalContent());
   }
 
   getStyle() {
@@ -30,10 +29,10 @@ export default class AmazonRainforest extends PureComponent {
 
   render() {
     const styles = this.getStyle();
-    let pageitem = 'navigation ui';
+    let pageitem = 'natural ui';
 
-    const amazonui = this.props.navigationContent ?
-    this.props.navigationContent.map((content, index) => {
+    const canyonui = this.props.naturalContent ?
+    this.props.naturalContent.map((content, index) => {
       return (
         <div key={content.get('id')} style={navigationStyle.section}>
           {(() => {
@@ -52,7 +51,7 @@ export default class AmazonRainforest extends PureComponent {
     : 'loading data ...';
 
     return (
-      <div style={_.assign({}, styles.homepage, navigationStyle.navigationBg, this.props.style)}>
+      <div style={_.assign({}, styles.homepage, naturalStyle.naturalBg, this.props.style)}>
         <div style={_.assign({}, navigationStyle.linkList)}>
           <span style={_.assign({}, navigationStyle.link)}
             onClick={() => {
@@ -61,29 +60,29 @@ export default class AmazonRainforest extends PureComponent {
 	  >Home</span>
           <span style={_.assign({}, navigationStyle.link)}
             onClick={() => {
-              this.context.router.history.push('/natural');
+              this.context.router.history.push('/navigation');
             }}
-	  >Grand Canyon</span>
+	  >Amazon Rainforest</span>
         </div>
         <div style={styles.header}>
-          <div style={navigationStyle.pageHeader}>Amazon Rainforest</div>
+          <div style={navigationStyle.pageHeader}>Grand Canyon</div>
         </div>
-        <div style={styles.content}>{amazonui}</div>
+        <div style={styles.content}>{canyonui}</div>
       </div>
     );
   }
 }
 
-AmazonRainforest.propTypes = {
+GrandCanyon.propTypes = {
   style: PropTypes.object
 };
 
-AmazonRainforest.defaultProps = {
+GrandCanyon.defaultProps = {
   enabled: true,
   authorized: true
 };
 
-AmazonRainforest.contextTypes = {
+GrandCanyon.contextTypes = {
   store: PropTypes.object,
   uiTheme: PropTypes.object,
   location: PropTypes.object,

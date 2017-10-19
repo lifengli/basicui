@@ -5,21 +5,18 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import {createStoreWithMiddleware} from '../middleware';
 
-import reducer from '../reducers/homepage';
+import reducer from '../reducers/natural';
 import SampleTheme from '../themes/SampleTheme';
-import HomePage from '../containers/Homepage';
+import GrandCanyon from '../containers/natural/Grand_Canyon';
 
 // each page handle its own reducer and store instance
 // tbd: only top level props need to be shared from common reducer
 const store = createStoreWithMiddleware(reducer);
 const uiTheme = _.cloneDeep(SampleTheme);
 
-const applicationId = 'basic-ui';
-
-export default class PortalPage extends PureComponent {
+export default class CanyonPage extends PureComponent {
   getChildContext() {
     return {
-      applicationId,
       store,
       uiTheme,
       location: this.props.location
@@ -29,19 +26,18 @@ export default class PortalPage extends PureComponent {
   render() {
     return (
       <MuiThemeProvider>
-        <HomePage />
+        <GrandCanyon />
       </MuiThemeProvider>
     );
   }
 }
 
-PortalPage.childContextTypes = {
-  applicationId: PropTypes.string,
+CanyonPage.childContextTypes = {
   store: PropTypes.object,
   uiTheme: PropTypes.object,
   location: PropTypes.object
 };
 
-PortalPage.PropTypes = {
+CanyonPage.propTypes = {
   location: PropTypes.object
 };

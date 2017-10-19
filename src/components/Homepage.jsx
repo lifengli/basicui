@@ -44,9 +44,10 @@ export default class Homepage extends PureComponent {
             <div style={styles.subHeader}>{content.get('name')}</div>
             {(() => {
               // temporarily activate first link
-              const active = new RegExp(/rainforest/i);
+              const navactive = new RegExp(/rainforest/i);
+              const natactive = new RegExp(/canyon/i);
               pageitem = content.get('items').map(item => {
-                if (active.test(item)) {
+                if (navactive.test(item)) {
                   return (
                     <div
                       key={item}
@@ -59,6 +60,20 @@ export default class Homepage extends PureComponent {
                     </div>
                   );
                 }
+                else if (natactive.test(item)) {
+                  return (
+                    <div
+                      key={item}
+                      style={_.assign(styles.activatedLink, styles.category)}
+                      onClick={() => {
+                        this.context.router.history.push('/natural');
+                      }}
+                    >
+                      {item}
+                    </div>
+                  );
+                }
+
                 return (
                   <div key={item} style={_.assign(styles.inactivatedLink, styles.category)}>{item}</div>
                 );

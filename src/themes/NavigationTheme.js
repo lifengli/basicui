@@ -29,9 +29,22 @@ const image = {
   opacity: 0.7
 };
 
+const linkList = {
+  paddingTop: 10,
+  paddingLeft: 10
+};
+
+const link = {
+  paddingRight: 10,
+  textDecoration: 'underline',
+  cursor: 'pointer'
+};
+
 export default {
   navigationBg,
   pageHeader,
   section,
-  image
+  image,
+  link,
+  linkList
 };
