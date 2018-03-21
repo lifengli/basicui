@@ -1,6 +1,6 @@
 # basicui 
 
-Basic UI components based on NodeJS and ReactJS
+Basic UI sample based on React, Redux, and Node
 
 [![Dependency](https://img.shields.io/badge/dependencies-up%20to%20date-green.svg)](https://github.com/lifengli/basicui)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/lifengli/basicui)
@@ -9,7 +9,7 @@ Basic UI components based on NodeJS and ReactJS
 
 ## Dev
 
-### 1. start uiserver at port 3000/3001
+### 1. clone and start uiserver at port 3000/3001
 
 > npm start
 
