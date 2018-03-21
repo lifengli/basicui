@@ -123,11 +123,6 @@ if (TARGET === 'start' || !TARGET) {
       new webpack.HotModuleReplacementPlugin(),
       new webpack.ProvidePlugin({
         fetch: 'imports?this=>global!exports?global.fetch!whatwg-fetch'
-      }),
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        'window.jQuery': 'jquery'
       })
     ]
   });

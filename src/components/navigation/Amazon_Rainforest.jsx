@@ -58,12 +58,12 @@ export default class AmazonRainforest extends PureComponent {
             onClick={() => {
               this.context.router.history.push('/');
             }}
-	  >Home</span>
+          >Home</span>
           <span style={_.assign({}, navigationStyle.link)}
             onClick={() => {
               this.context.router.history.push('/natural');
             }}
-	  >Grand Canyon</span>
+          >Grand Canyon</span>
         </div>
         <div style={styles.header}>
           <div style={navigationStyle.pageHeader}>Amazon Rainforest</div>

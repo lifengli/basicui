@@ -57,12 +57,12 @@ export default class GrandCanyon extends PureComponent {
             onClick={() => {
               this.context.router.history.push('/');
             }}
-	  >Home</span>
+          >Home</span>
           <span style={_.assign({}, navigationStyle.link)}
             onClick={() => {
               this.context.router.history.push('/navigation');
             }}
-	  >Amazon Rainforest</span>
+          >Amazon Rainforest</span>
         </div>
         <div style={styles.header}>
           <div style={navigationStyle.pageHeader}>Grand Canyon</div>

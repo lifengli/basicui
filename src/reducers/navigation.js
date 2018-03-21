@@ -1,6 +1,5 @@
 import Immutable from 'immutable';
 import { createReducer } from 'redux-act';
-import { combineReducers } from 'redux';
 
 import {
   getNavigationMap,
@@ -14,7 +13,7 @@ const defaultState = Immutable.fromJS({
   navigationMap: null
 });
 
-const navigation = createReducer({
+const reducer = createReducer({
   [getNavigationMap]: (state, params) => state.mergeDeep({
     creatingConnection: true,
     navigationMap: params
@@ -29,9 +28,5 @@ const navigation = createReducer({
     });
   }
 }, defaultState);
-
-const reducer = combineReducers({
-  navigation
-});
 
 export default reducer;

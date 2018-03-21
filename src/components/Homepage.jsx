@@ -112,5 +112,6 @@ Homepage.contextTypes = {
   store: PropTypes.object,
   uiTheme: PropTypes.object,
   location: PropTypes.object,
-  router: PropTypes.object
+  router: PropTypes.object,
+  applicationId: PropTypes.string
 };

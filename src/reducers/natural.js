@@ -1,6 +1,5 @@
 import Immutable from 'immutable';
 import { createReducer } from 'redux-act';
-import { combineReducers } from 'redux';
 
 import {
   getNaturalMap,
@@ -14,7 +13,7 @@ const defaultState = Immutable.fromJS({
   naturalMap: null
 });
 
-const natural = createReducer({
+const reducer = createReducer({
   [getNaturalMap]: (state, params) => state.mergeDeep({
     creatingConnection: true,
     naturalMap: params
@@ -29,9 +28,5 @@ const natural = createReducer({
     });
   }
 }, defaultState);
-
-const reducer = combineReducers({
-  natural
-});
 
 export default reducer;
