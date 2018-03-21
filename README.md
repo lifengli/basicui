@@ -7,7 +7,7 @@ Basic UI sample based on React, Redux, and Node
 [![Maintenance](https://img.shields.io/badge/maintained-yes-orange.svg)](https://github.com/lifengli/basicui)
 [![Pull](https://img.shields.io/badge/pull%20request-welcome-ff69b4.svg)](https://github.com/lifengli/basicui)
 
-## Dev
+## Dev setup
 
 ### 1. clone and start uiserver at port 3000/3001
 
