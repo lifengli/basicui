@@ -90,7 +90,7 @@ export default class Homepage extends PureComponent {
     return (
       <div style={_.assign({}, styles.homepage, styles.homepageBg, this.props.style)}>
         <div style={styles.header}>
-          <div style={styles.pageHeader}><span style={styles.iconContainer}>{titleIcon}</span>Basic UI</div>
+          <div style={styles.pageHeader}><span style={styles.iconContainer}>{titleIcon}</span>Basic UI sample</div>
         </div>
         <div style={styles.content}>{basicui}</div>
       </div>

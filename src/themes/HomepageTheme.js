@@ -5,7 +5,7 @@ const homepage = {
 };
 
 const homepageBg = {
-  backgroundImage: 'url("/images/galaxy.gif")',
+  backgroundImage: 'url("/images/water.jpg")',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover'
 };
@@ -13,13 +13,13 @@ const homepageBg = {
 const header = {
   width: '100%',
   height: 100,
-  paddingTop: 50,
+  paddingTop: 100,
   textAlign: 'center'
 };
 
 const content = {
   width: 900,
-  paddingTop: 10,
+  paddingTop: 100,
   margin: '0 auto'
 };
 

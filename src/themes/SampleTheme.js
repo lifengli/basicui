@@ -3,19 +3,21 @@ import Colors from './BaseColors';
 
 const colors = {
   page: {
-    header: Colors.blue.normal,
+    header: Colors.grey.lightest,
     top: Colors.black,
     middle: Colors.grey.normal,
     bottom: Colors.white
   },
   panel: {
     top: Colors.white,
+    middle: Colors.brown.lighter,
     bottom: Colors.blue.normal
   },
   link: {
     top: Colors.green.lightest,
     middle: Colors.green.normal,
     bottom: Colors.blue.darker,
+    active: Colors.blue.darkest,
     disabled: Colors.grey.darker
   },
   icon: {
@@ -69,7 +71,7 @@ const subHeader = {
   padding: 10,
   fontWeight: 'bold',
   fontSize: 24,
-  color: colors.page.middle
+  color: colors.panel.middle
 };
 
 const category = {
@@ -81,7 +83,9 @@ const category = {
 
 const activatedLink = {
   cursor: 'pointer',
-  color: colors.link.middle
+  fontWeight: 'bold',
+  textDecoration: 'underline',
+  color: colors.link.active
 };
 
 const inactivatedLink = {

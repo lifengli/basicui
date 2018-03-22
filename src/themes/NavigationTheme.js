@@ -30,6 +30,7 @@ const image = {
 };
 
 const linkList = {
+  fontSize: 24,
   paddingTop: 10,
   paddingLeft: 10
 };
