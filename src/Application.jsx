@@ -3,9 +3,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import {Route, Switch, BrowserRouter} from 'react-router-dom';
-
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import provider from './provider';
 import reducer from './reducers/root';
@@ -15,11 +13,6 @@ import {createStoreWithMiddleware} from './middleware';
 import PortalPage from './containers/Homepage';
 import AmazonPage from './containers/navigation/Amazon_Rainforest';
 import CanyonPage from './containers/natural/Grand_Canyon';
-
-require('velocity-animate');
-require('velocity-animate/velocity.ui');
-
-injectTapEventPlugin();
 
 const store = createStoreWithMiddleware(
       reducer,
